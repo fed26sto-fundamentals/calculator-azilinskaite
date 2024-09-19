@@ -1,4 +1,64 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+#container {
+    width: 360px;
+    padding: 10px;
+    border: 4px solid white;
+    border-radius: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.screen {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 3rem;
+    border-style: none;
+    background-color: rgba(64, 255, 0, 0.8);
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    height: 70px;
+    border-radius: 14px;
+    border: 1px solid white;
+    font-size: 2rem;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+button:active {
+    background-color: white;
+    color: black;
+}
+
+.allClear:hover {
+    background-color: rgba(255, 0, 0, 0.75);
+}
+
+.equalSign {
+    height: 100%;
+    grid-area: 2/4/6/5;
+}
+
+.equalSign:hover {
+    background-color: rgba(0, 255, 217, 0.67);
+}
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+   
 }
