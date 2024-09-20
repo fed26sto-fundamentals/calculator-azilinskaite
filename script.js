@@ -82,7 +82,7 @@ const handleOperator = (nextOperator) => {
 
         calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
         calculator.firstOperand = result;
-    }
+    };
 
     calculator.waitingForSecondOperand = true;
     calculator.operator = nextOperator;
@@ -97,9 +97,13 @@ const calculate = (firstOperand, secondOperand, operator) => {
     } else if (operator === "*") {
         return firstOperand * secondOperand;
     } else if (operator === "/") {
+        if(secondOperand == 0) {
+        return alert("Unacceptable!");
+        } else {
         return firstOperand / secondOperand;
     }
-    return secondOperand;
+}
+    return secondOperand;   
 };
 
 //Reset calculator
@@ -110,3 +114,6 @@ const resetCalculator = () => {
     calculator.waitingForSecondOperand = false;
     calculator.operator = null;
 };
+
+//show alert message on screen
+//show operator value on screen
